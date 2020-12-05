@@ -54,6 +54,17 @@ body {
   }
 }
 
+#weather {
+  display: flex;
+  align-items: center;
+}
+
+#weather-text {
+  color: whitesmoke;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
 .bg-night {
   background-color: rgb(10, 21, 41);
 }
