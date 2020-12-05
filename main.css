@@ -16,8 +16,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   width: 100%;
   height: 100%;
+  color: whitesmoke;
+  font-size: 30px;
 }
 
 #location {
@@ -52,9 +55,18 @@ body {
   align-items: center;
 }
 
+#weather-temp {
+  padding-top: 10px;
+}
+
+#weather-icon {
+  user-select: none;
+}
+
 #weather-text {
   color: whitesmoke;
-  font-size: 20px;
+  font-size: 30px;
+  padding-top: 10px;
   text-transform: capitalize;
 }
 
