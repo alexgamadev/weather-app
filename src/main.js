@@ -13,12 +13,12 @@ async function loadWeather(city) {
     const localTime = convertUTCToDate(Date.now(), data.timezone);
     const isDaytime = isDay(localTime, sunrise, sunset);
     const country = getCountryName(data.sys.country);
+    weatherDisplay.setTemperature(data.main.temp, 'cels');
     weatherDisplay.setLocation(`${data.name}, ${country}`);
     weatherDisplay.setWeather(data.weather[0].description);
     weatherDisplay.updateBackground(isDaytime);
     weatherDisplay.setIcon(getWeatherIconURL(data.weather[0].icon));
     console.log(data);
-    console.log(data.weather[0].description);
   } catch (err) {
     throw new Error(err);
   }

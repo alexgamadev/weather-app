@@ -2,6 +2,7 @@
 
 export default class WeatherDisplay {
   constructor() {
+    this.weatherTemp = document.querySelector('#weather-temp');
     this.weatherIcon = document.querySelector('#weather-icon');
     this.weatherText = document.querySelector('#weather-text');
     this.locationText = document.querySelector('#location');
@@ -12,6 +13,22 @@ export default class WeatherDisplay {
 
   setLocation(location) {
     this.locationText.innerText = location;
+  }
+
+  setTemperature(temp, unitTemp) {
+    let unit;
+    switch (unitTemp) {
+      case 'cels':
+        unit = '°C';
+        break;
+      case 'fahr':
+        unit = '°F';
+        break;
+      default:
+        unit = 'Error';
+        break;
+    }
+    this.weatherTemp.innerText = `${temp}${unit}`;
   }
 
   setWeather(weather) {
