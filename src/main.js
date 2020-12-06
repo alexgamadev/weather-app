@@ -16,6 +16,7 @@ async function loadWeather(city) {
     const localTime = convertUTCToDate(Date.now(), data.timezone);
     const isDaytime = isDay(localTime, sunrise, sunset);
     const country = getCountryName(data.sys.country);
+    weatherDisplay.clearSearchText();
     weatherDisplay.setTemperature(data.main.temp, 'cels');
     weatherDisplay.setLocation(`${data.name}, ${country}`);
     weatherDisplay.setWeather(data.weather[0].description);

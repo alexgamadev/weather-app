@@ -58,6 +58,10 @@ export default class WeatherDisplay {
     return this.searchBtn;
   }
 
+  clearSearchText() {
+    this.searchText.value = '';
+  }
+
   getSearchText() {
     return this.searchText.value;
   }
