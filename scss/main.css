@@ -1,18 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
-#app.day {
-  --bg-color: #85b0ff;
-  --btn-bg: #ccc;
-  --text-color: #000;
-  --location-text: #000;
-}
-
-#app.night {
-  --bg-color: #0a1529;
-  --btn-bg: #555;
-  --text-color: #f5f5f5;
-  --location-text: #ffd54b;
-}
-
 * {
   box-sizing: content-box;
 }
@@ -24,6 +10,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   transition: background-color 1s linear;
+  color: black;
 }
 
 #app {
@@ -32,8 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  color: var(--text-color);
-  background-color: var(--bg-color);
   width: 100%;
   height: 100%;
   font-size: 30px;
@@ -41,7 +26,9 @@ body {
 
 #location {
   font-size: 60px;
-  color: var(--location-text);
+}
+#location.night {
+  color: #ffd54b;
 }
 
 #search-text {
@@ -49,8 +36,12 @@ body {
   border-radius: 0.4em;
   padding: 0.25em 0.5em;
   font-size: 30px;
-  color: var(--text-color);
-  background-color: var(--btn-bg);
+  background-color: #ccc;
+  color: black;
+}
+#search-text.night {
+  background-color: #555;
+  color: whitesmoke;
 }
 
 #search-btn {
@@ -58,8 +49,12 @@ body {
   border-radius: 0.4em;
   padding: 0.25em 0.5em;
   font-size: 30px;
-  color: var(--text-color);
-  background-color: var(--btn-bg);
+  background-color: #ccc;
+  color: black;
+}
+#search-btn.night {
+  background-color: #555;
+  color: whitesmoke;
 }
 #search-btn:hover {
   cursor: pointer;
@@ -83,6 +78,14 @@ body {
   font-size: 30px;
   padding-top: 10px;
   text-transform: capitalize;
+}
+
+.bg-night {
+  background-color: #0a1529;
+}
+
+.bg-day {
+  background-color: #85b0ff;
 }
 
 .sun {
