@@ -49,12 +49,18 @@ export default class WeatherDisplay {
 
   updateBackground(isDay) {
     this.app = document.querySelector('#app');
+    this.sun = document.querySelector('#sun');
+    this.moon = document.querySelector('#moon');
     if (isDay) {
       this.app.classList.add('day');
       this.app.classList.remove('night');
+      this.sun.classList.remove('move');
+      this.moon.classList.add('move');
     } else {
       this.app.classList.remove('day');
       this.app.classList.add('night');
+      this.sun.classList.add('move');
+      this.moon.classList.remove('move');
     }
   }
 }
