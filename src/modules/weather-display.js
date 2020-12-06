@@ -48,12 +48,13 @@ export default class WeatherDisplay {
   }
 
   updateBackground(isDay) {
+    this.app = document.querySelector('#app');
     if (isDay) {
-      this.body.classList.add('bg-day');
-      this.body.classList.remove('bg-night');
+      this.app.classList.add('day');
+      this.app.classList.remove('night');
     } else {
-      this.body.classList.add('bg-night');
-      this.body.classList.remove('bg-day');
+      this.app.classList.remove('day');
+      this.app.classList.add('night');
     }
   }
 }

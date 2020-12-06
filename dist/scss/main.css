@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 * {
   box-sizing: content-box;
 }
@@ -9,7 +8,9 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 1s linear;
+  color: black;
 }
 
 #app {
@@ -17,28 +18,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 20px;
-
   width: 100%;
   height: 100%;
-
-  color: whitesmoke;
   font-size: 30px;
 }
 
 #location {
   font-size: 60px;
-  color: rgb(255, 213, 75);
+}
+#location.night {
+  color: #ffd54b;
 }
 
 #search-text {
   border: none;
   border-radius: 0.4em;
   padding: 0.25em 0.5em;
-
   font-size: 30px;
-
+  background-color: #ccc;
+  color: black;
+}
+#search-text.night {
   background-color: #555;
   color: whitesmoke;
 }
@@ -47,16 +48,17 @@ body {
   border: none;
   border-radius: 0.4em;
   padding: 0.25em 0.5em;
-
   font-size: 30px;
-  
+  background-color: #ccc;
+  color: black;
+}
+#search-btn.night {
   background-color: #555;
   color: whitesmoke;
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
+}
+#search-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 #weather {
@@ -69,42 +71,46 @@ body {
 }
 
 #weather-icon {
-  user-select: none; 
+  user-select: none;
 }
 
 #weather-text {
-  color: whitesmoke;
   font-size: 30px;
   padding-top: 10px;
   text-transform: capitalize;
 }
 
 .bg-night {
-  background-color: rgb(10, 21, 41);
+  background-color: #0a1529;
 }
 
 .bg-day {
-  background-color: rgb(133, 176, 255);
+  background-color: #85b0ff;
 }
 
 .sun {
   position: absolute;
   left: 50px;
   top: 20px;
-
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgb(255, 204, 38);
+  background-color: #ffcc26;
+  transform-origin: 20% 300%;
+  transition: transform 1s ease-in-out;
+}
+.sun.move {
+  transform: rotate(-90deg);
 }
 
 .moon {
   position: absolute;
   left: 50px;
   top: 20px;
-
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgb(255, 251, 213);
+  background-color: #fffbd5;
 }
+
+/*# sourceMappingURL=main.css.map */

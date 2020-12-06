@@ -1,4 +1,4 @@
-import lookup from "country-code-lookup";
+import lookup from 'country-code-lookup';
 
 export async function getWeatherData(city) {
   try {
@@ -19,3 +19,4 @@ export function getCountryName(countryCode) {
   console.log(data);
   return data.country;
 }
+

@@ -1,17 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
-#app.day {
-  --bg-color: #85b0ff;
-  --btn-bg: #ccc;
-  --text-color: #000;
-  --location-text: #000;
-}
-
-#app.night {
-  --bg-color: #0a1529;
-  --btn-bg: #555;
-  --text-color: #f5f5f5;
-  --location-text: #ffd54b;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import "themes";
 
 * {
   box-sizing: content-box;
@@ -22,7 +10,8 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+
   transition: background-color 1s linear;
 }
 
@@ -31,39 +20,51 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   gap: 20px;
+
   color: var(--text-color);
   background-color: var(--bg-color);
+
   width: 100%;
   height: 100%;
+  
   font-size: 30px;
 }
 
 #location {
   font-size: 60px;
+
   color: var(--location-text);
+  
 }
 
 #search-text {
   border: none;
   border-radius: 0.4em;
   padding: 0.25em 0.5em;
+
   font-size: 30px;
+
   color: var(--text-color);
   background-color: var(--btn-bg);
+  
 }
 
 #search-btn {
   border: none;
   border-radius: 0.4em;
   padding: 0.25em 0.5em;
+
   font-size: 30px;
+
   color: var(--text-color);
   background-color: var(--btn-bg);
-}
-#search-btn:hover {
-  cursor: pointer;
-  opacity: 0.8;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 #weather {
@@ -76,7 +77,7 @@ body {
 }
 
 #weather-icon {
-  user-select: none;
+  user-select: none; 
 }
 
 #weather-text {
@@ -89,25 +90,27 @@ body {
   position: absolute;
   left: 50px;
   top: 20px;
+
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ffcc26;
+  background-color: rgb(255, 204, 38);
+
   transform-origin: 20% 300%;
   transition: transform 1s ease-in-out;
-}
-.sun.move {
-  transform: rotate(-90deg);
+
+  &.move {
+    transform: rotate(-90deg);
+  }
 }
 
 .moon {
   position: absolute;
   left: 50px;
   top: 20px;
+
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #fffbd5;
+  background-color: rgb(255, 251, 213);
 }
-
-/*# sourceMappingURL=main.css.map */
