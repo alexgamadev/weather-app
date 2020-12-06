@@ -23,7 +23,6 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  transition: background-color 1s linear;
 }
 
 #app {
@@ -34,6 +33,7 @@ body {
   gap: 20px;
   color: var(--text-color);
   background-color: var(--bg-color);
+  transition: background-color 1s linear;
   width: 100%;
   height: 100%;
   font-size: 30px;
@@ -85,7 +85,7 @@ body {
   text-transform: capitalize;
 }
 
-.sun {
+#sun {
   position: absolute;
   left: 50px;
   top: 20px;
@@ -96,18 +96,23 @@ body {
   transform-origin: 20% 300%;
   transition: transform 1s ease-in-out;
 }
-.sun.move {
+#sun.move {
   transform: rotate(-90deg);
 }
 
-.moon {
+#moon {
   position: absolute;
-  left: 50px;
+  right: 50px;
   top: 20px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: #fffbd5;
+  transform-origin: 80% 300%;
+  transition: transform 1s ease-in-out;
+}
+#moon.move {
+  transform: rotate(90deg);
 }
 
 /*# sourceMappingURL=main.css.map */
