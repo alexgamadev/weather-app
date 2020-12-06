@@ -14,7 +14,7 @@ export async function getWeatherData(city) {
 }
 
 export function getWeatherIconURL(iconCode) {
-  return `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
 export function getCountryName(countryCode) {
