@@ -85,6 +85,10 @@ body {
   text-transform: capitalize;
 }
 
+#status-message {
+  text-transform: capitalize;
+}
+
 #sun {
   position: absolute;
   left: 50px;

@@ -10,6 +10,7 @@ export default class WeatherDisplay {
     this.locationText = document.querySelector('#location');
     this.searchBtn = document.querySelector('#search-btn');
     this.searchText = document.querySelector('#search-text');
+    this.statusMsg = document.querySelector('#status-message');
     this.body = document.querySelector('body');
   }
 
@@ -47,6 +48,10 @@ export default class WeatherDisplay {
 
   setLocalDay(day) {
     this.dayLocal.innerText = day;
+  }
+
+  setStatusMessage(msg) {
+    this.statusMsg.innerText = msg;
   }
 
   getSearchBtn() {

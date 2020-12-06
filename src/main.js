@@ -10,6 +10,7 @@ const weatherDisplay = new WeatherDisplay();
 async function loadWeather(city) {
   try {
     const data = await getWeatherData(city);
+    weatherDisplay.setStatusMessage('');
     const sunrise = convertUTCToDate(data.sys.sunrise * 1000, data.timezone);
     const sunset = convertUTCToDate(data.sys.sunset * 1000, data.timezone);
     const localTime = convertUTCToDate(Date.now(), data.timezone);
@@ -23,7 +24,7 @@ async function loadWeather(city) {
     weatherDisplay.updateBackground(isDaytime);
     weatherDisplay.setIcon(getWeatherIconURL(data.weather[0].icon));
   } catch (err) {
-    throw new Error(err);
+    weatherDisplay.setStatusMessage(err);
   }
 }
 
