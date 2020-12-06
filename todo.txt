@@ -1,0 +1,15 @@
+1) Make day/night theme colours work (Done)
+2) Make sun/moon transitions work (Done)
+3) Clean up code
+4) Error handling
+5) Add local time
+6) Option between celcius and fahrenheit
+7) Add more data
+
+Colours needed:
+bg-day
+bg-night
+location text day
+location text night
+button day
+button night

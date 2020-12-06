@@ -1,4 +1,6 @@
-import { convertUTCToDate, isDay } from './modules/date-time';
+import {
+  convertUTCToDate, isDay, getDayString, getTimeString,
+} from './modules/date-time';
 import WeatherDisplay from './modules/weather-display';
 import { getWeatherData, getWeatherIconURL, getCountryName } from './modules/weather-api';
 
@@ -16,9 +18,10 @@ async function loadWeather(city) {
     weatherDisplay.setTemperature(data.main.temp, 'cels');
     weatherDisplay.setLocation(`${data.name}, ${country}`);
     weatherDisplay.setWeather(data.weather[0].description);
+    weatherDisplay.setLocalTime(getTimeString(localTime));
+    weatherDisplay.setLocalDay(getDayString(localTime.getDay()));
     weatherDisplay.updateBackground(isDaytime);
     weatherDisplay.setIcon(getWeatherIconURL(data.weather[0].icon));
-    console.log(data);
   } catch (err) {
     throw new Error(err);
   }

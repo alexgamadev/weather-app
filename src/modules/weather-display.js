@@ -2,6 +2,8 @@
 
 export default class WeatherDisplay {
   constructor() {
+    this.timeLocal = document.querySelector('#time-local');
+    this.dayLocal = document.querySelector('#day-local');
     this.weatherTemp = document.querySelector('#weather-temp');
     this.weatherIcon = document.querySelector('#weather-icon');
     this.weatherText = document.querySelector('#weather-text');
@@ -37,6 +39,14 @@ export default class WeatherDisplay {
 
   setIcon(url) {
     this.weatherIcon.src = url;
+  }
+
+  setLocalTime(time) {
+    this.timeLocal.innerText = time;
+  }
+
+  setLocalDay(day) {
+    this.dayLocal.innerText = day;
   }
 
   getSearchBtn() {
